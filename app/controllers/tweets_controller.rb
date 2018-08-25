@@ -1,7 +1,7 @@
 class TweetsController < ApplicationController
 
 	def index
-		@tweets = Tweet.all.order('id DESC')
+		@tweets = Tweet.includes(:user).order('id DESC')
 	end
     
     def new
@@ -18,7 +18,7 @@ class TweetsController < ApplicationController
 
     private
     def tweet_params
-    	params.require(:tweet).permit(:text)
+    	params.require(:tweet).permit(:text).merge(user_id: current_user.id)
     end
 
 end
