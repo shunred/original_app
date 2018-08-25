@@ -22,9 +22,12 @@
     <div class="nav-wrapper">
       <a href="/" class="brand-logo">Blog</a>
       <ul id="nav-mobile" class="right hide-on-med-and-down">
-        <li><%= link_to "SingIn", new_user_session_path, method: :get %></li>
-        <li><%= link_to "SingOut", destroy_user_session_path, method: :delete %></li>
-        <li><%= link_to "New", "tweets/new", method: :get %></li>
+      	<% if user_signed_in? %>
+	      	<li><%= link_to "SingOut", destroy_user_session_path, method: :delete %></li>
+	        <li><%= link_to "New", "tweets/new", method: :get %></li>
+        <% else %>
+         	<li><%= link_to "SingIn", new_user_session_path, method: :get %></li>
+        <% end %>
       </ul>
     </div>
   </nav>
