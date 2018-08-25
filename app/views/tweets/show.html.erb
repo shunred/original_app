@@ -4,8 +4,10 @@
         <div class="card-content">
           	<%= @tweet.text %>
             	<div class="card-action">
-    	          <a href="#">EDIT</a>
-    	          <a href="#">DESTROY</a>
+                <% if user_signed_in? && current_user.id == @tweet.user.id %>
+                <%= link_to "EDIT", "/tweets/#{@tweet.id}/edit", method: :get %>
+                <a href="#">DESTROY</a>
+                <% end %>
     	        </div>
       </div>
     </div>
