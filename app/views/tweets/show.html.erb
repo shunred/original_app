@@ -6,7 +6,7 @@
             	<div class="card-action">
                 <% if user_signed_in? && current_user.id == @tweet.user.id %>
                 <%= link_to "EDIT", "/tweets/#{@tweet.id}/edit", method: :get %>
-                <a href="#">DESTROY</a>
+                <%= link_to "DESTROY", "/tweets/#{@tweet.id}", method: :delete %>
                 <% end %>
     	        </div>
       </div>
