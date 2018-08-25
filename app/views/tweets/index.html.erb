@@ -5,7 +5,7 @@
           <% @tweets.each do |tweet| %>
           	<%= tweet.text %>
           	<div class="card-action">
-	          <a href="#">SHOW</a>
+	          <%= link_to "SHOW", "/tweets/#{tweet.id}", method: :get %>
 	          <a href="#">EDIT</a>
 	          <a href="#">DESTROY</a>
 	        </div>
@@ -13,3 +13,4 @@
       </div>
     </div>
   </div>
+</div>
