@@ -5,10 +5,12 @@
           <% @tweets.each do |tweet| %>
           	<%= tweet.text %>
           	<div class="card-action">
-	          <%= link_to "SHOW", "/tweets/#{tweet.id}", method: :get %>
-	          <a href="#">EDIT</a>
-	          <a href="#">DESTROY</a>
-	        </div>
+	           <%= link_to "SHOW", "/tweets/#{tweet.id}", method: :get %>
+             <% if user_signed_in? && current_user.id == tweet.user.id %>
+	           <%= link_to "EDIT", "/tweets/#{tweet.id}/edit", method: :get %>
+	           <a href="#">DESTROY</a>
+             <% end %>
+	          </div>
           <% end %>
       </div>
     </div>
