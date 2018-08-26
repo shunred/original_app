@@ -1,0 +1,26 @@
+.contents {
+	width: 500px;
+	margin: 0 auto;
+}
+
+.each_card_content {
+	min-height: 100px;
+	border: solid 1px #DCDCDC;
+	border-radius: 4px;
+	margin: 10px 0;
+	padding: 10px;
+}
+
+.action li {
+	float: left;
+    margin-right: 10px;
+    padding: 3px 6px;
+    font-size: 16px;
+    border: 1px solid #ffca28;
+    border-radius: 4px;
+}
+
+.action li a {
+    text-decoration: none;
+    color: #ffca28;
+}
