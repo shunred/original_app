@@ -14,11 +14,11 @@
   </div>
 
   <div class="comment-area">
-    <%= form_for(@tweet) do |f| %>
+    <%= form_for(@comment) url; tweet_comments_path do |f| %>
     <%= f.text_area :text, style: 'width: 600px; height: 300px;' %></br>
 
     <%= f.submit "POST" %>
 
-<% end %>
+　　<% end %>
   </div>
 </div>
