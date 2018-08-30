@@ -1,15 +1,16 @@
-<div class="contents">
-
-          <% @tweets.each do |tweet| %>
-            <div class="each_card_content">
-            	 <%= tweet.text %>
-            <ul class="action">
-  	           <li><%= link_to "SHOW", "/tweets/#{tweet.id}", method: :get %></li>
-               <% if user_signed_in? && current_user.id == tweet.user.id %>
-  	           <li><%= link_to "EDIT", "/tweets/#{tweet.id}/edit", method: :get %></li>
-  	           <li><%= link_to "DESTROY", "/tweets/#{tweet.id}", method: :delete %></li>
-               <% end %>
-            </ul>
-	          </div>
-          <% end %>
-</div>
+<div class="wrapper">
+  <div class="contents">
+     <% @tweets.each do |tweet| %>
+     <div class="each_card_content">
+        <%= tweet.text %>
+        <ul class="action">
+  	       <li><%= link_to "SHOW", "/tweets/#{tweet.id}", method: :get %></li>
+           <% if user_signed_in? && current_user.id == tweet.user.id %>
+  	       <li><%= link_to "EDIT", "/tweets/#{tweet.id}/edit", method: :get %></li>
+  	       <li><%= link_to "DESTROY", "/tweets/#{tweet.id}", method: :delete %></li>
+           <% end %>
+        </ul>
+	   </div>
+     <% end %>
+  </div>
+</div>_
