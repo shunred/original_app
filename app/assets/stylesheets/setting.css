@@ -97,12 +97,20 @@ input, select {
 
 /*ここからまでリセットCSS*/
 
+
+/*ヘッダー部分*/
+
+.header__nav {
+	margin-bottom: 0px;
+}
+
 .nav__wrapper {
 	height: 70px;
 	color: white;
 	background-color: #F44336;
 	line-height: 70px;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.26)
+    box-shadow: 0 3px 5px gray;
+    
 }
 
 .brand-logo {
@@ -126,8 +134,12 @@ input, select {
 	color: white;
 }
 
+/*メインコンテンツ*/
+
 .wrapper {
+	margin-top: 3px;
     background-color: #EEEEEE;
+    padding: 0;
 }
 
 .contents {
@@ -139,7 +151,6 @@ input, select {
 	min-height: 100px;
 	border: solid 1px #DCDCDC;
 	border-radius: 4px;
-	margin: 10px 0;
 	padding: 10px;
 }
 
