@@ -7,26 +7,20 @@
   integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
   crossorigin="anonymous"></script>
 
-   <!-- Compiled and minified CSS -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/css/materialize.min.css">
-
-  <!-- Compiled and minified JavaScript -->
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js"></script>
-
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
 </head>
 <body>
-  <nav class="#ffca28 amber lighten-1">
-    <div class="nav-wrapper">
+  <nav class="header__nav">
+    <div class="nav__wrapper">
       <a href="/" class="brand-logo">Blog</a>
-      <ul id="nav-mobile" class="right hide-on-med-and-down">
+      <ul class="menu">
       	<% if user_signed_in? %>
-	      	<li><%= link_to "SingOut", destroy_user_session_path, method: :delete %></li>
-	        <li><%= link_to "New", "tweets/new", method: :get %></li>
+	      	<li class="menu__list"><%= link_to "SingOut", destroy_user_session_path, method: :delete %></li>
+	        <li class="menu__list"><%= link_to "New", "tweets/new", method: :get %></li>
         <% else %>
-         	<li><%= link_to "SingIn", new_user_session_path, method: :get %></li>
+         	<li class="menu__list"><%= link_to "SingIn", new_user_session_path, method: :get %></li>
         <% end %>
       </ul>
     </div>
