@@ -139,6 +139,7 @@ input, select {
 .wrapper {
 	margin-top: 3px;
     background-color: #EEEEEE;
+    height: 700px;
 }
 .contents {
 	width: 500px;
@@ -203,3 +204,40 @@ input, select {
 	filter:alpha(opacity=80);
 	-ms-filter: “alpha( opacity=80 )”;
 }
+
+/*アクション後*/
+
+.after_action {
+    text-align: center;
+	height: 100px;
+	background-color: white;
+	border: solid 1px #DCDCDC;
+	border-radius: 3px;
+	padding: 10px;
+	box-shadow: 0 1px 5px gray;
+}
+
+.after_action p {
+	margin: 10px;
+}
+
+.after_action a {
+	margin: 30px auto;
+    color: white;
+	background-color: #FDD835;
+    text-decoration: none;
+    font-size: 16px;
+    border-radius: 3px;
+    display: block;
+    width: 200px;
+    height: 30px;
+    line-height: 30px;
+}
+
+.after_action a:hover {
+	opacity:0.8;
+	filter:alpha(opacity=80);
+	-ms-filter: “alpha( opacity=80 )”;
+}
+
+
