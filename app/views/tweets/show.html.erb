@@ -18,12 +18,14 @@
        <%= f.submit "POST", :class=>"btn" %>
        <% end %>
       </div>
-  
+
       <div class="comment-display">
        <p><コメント一覧></p>
        <% @comments.each do |comment| %>
-       <%= simple_format(comment.text) %>
-       <% end %>      
+        <p>
+         <strong><%= link_to comment.user.id, "/users/#{comment.user_id}" %></strong>:<%= comment.text %>
+        </p>
+       <% end %>
       </div>
   </div>
 </div>
