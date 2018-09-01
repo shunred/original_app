@@ -1,34 +1,29 @@
- <div class="col s12 m7">
-    <div class="card horizontal">
-      <div class="card-stacked">
-        <div class="card-content">
-          	<%= @tweet.text %>
-            	<div class="card-action">
-                <% if user_signed_in? && current_user.id == @tweet.user.id %>
-                <%= link_to "EDIT", "/tweets/#{@tweet.id}/edit", method: :get %>
-                <%= link_to "DESTROY", "/tweets/#{@tweet.id}", method: :delete %>
-                <% end %>
-    	        </div>
+ <div class="wrapper">
+  <div class="contents">
+     <div class="each_card_content">
+       <div class="text">
+        <%= simple_format(@tweet.text) %>
+       </div>
+        <ul class="action">
+           <% if user_signed_in? && current_user.id == @tweet.user.id %>
+           <li><%= link_to "EDIT", "/tweets/#{@tweet.id}/edit", method: :get %></li>
+           <li><%= link_to "DESTROY", "/tweets/#{@tweet.id}", method: :delete %></li>
+           <% end %>
+        </ul>
       </div>
-    </div>
-  </div>
-
-  <div class="comment-write-area">
-    <%= form_for([@tweet, @comment]) do |f| %>
-    <%= f.text_area :text, style: 'width: 300px; height: 50px;' %></br>
-
-    <%= f.submit "POST" %>
-
-　　<% end %>
-  </div>
+      <div class="comment-write-area">
+       <p>コメントする</p>
+       <%= form_for([@tweet, @comment]) do |f| %>
+       <%= f.text_area :text, style: 'width: 300px; height: 50px;' %></br>
+       <%= f.submit "POST" %>
+       <% end %>
+      </div>
   
-  <div class="comment-display">
-     <% @comments.each do |comment| %>
-      
-      <%= comment.text %></br>
-
-     <% end %>
-
+      <div class="comment-display">
+       <p>コメント一覧</p>
+       <% @comments.each do |comment| %>
+       <%= comment.text %></br>
+       <% end %>      
+      </div>
   </div>
-
 </div>
