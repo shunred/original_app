@@ -139,7 +139,8 @@ input, select {
 .wrapper {
 	margin-top: 3px;
     background-color: #EEEEEE;
-    height: 700px;
+    min-height: 700px;
+    height: 100%;
 }
 .contents {
 	width: 500px;
