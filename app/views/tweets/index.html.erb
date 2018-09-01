@@ -2,7 +2,7 @@
   <div class="contents">
      <% @tweets.each do |tweet| %>
      <div class="each_card_content">
-        <%= tweet.text %>
+        <%= simple_format(tweet.text) %>
         <ul class="action">
   	       <li><%= link_to "SHOW", "/tweets/#{tweet.id}", method: :get %></li>
            <% if user_signed_in? && current_user.id == tweet.user.id %>
