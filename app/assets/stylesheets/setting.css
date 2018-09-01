@@ -163,13 +163,15 @@ input, select {
 
 .each_card_content p {
 	padding: 10px;
+	margin-bottom: 40px;
+	word-wrap:break-word;
 	
 }
 
 .action  {
-	width: 500px;
 	border-top: solid 1px #DCDCDC;
 	padding-top: 10px;
+	width: 500px;
 	position: absolute;
 	left: 10px;
 	bottom: 10px;
@@ -183,11 +185,11 @@ input, select {
 
 .action li a {
 	color: white;
-	background-color: #FFA726;
+	background-color: #FDD835;
     text-decoration: none;
     margin-right: 20px;
     font-size: 16px;
-    border: 1px solid #FFA726;
+    /*border: 1px solid #FFA726;*/
     border-radius: 3px;
     display: block;
     width: 90px;
