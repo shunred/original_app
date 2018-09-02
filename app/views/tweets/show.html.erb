@@ -14,16 +14,18 @@
       <div class="comment-write-area">
        <p>コメントする</p>
        <%= form_for([@tweet, @comment]) do |f| %>
-       <%= f.text_area :text, style: 'width: 300px; height: 50px;' %></br>
-       <%= f.submit "POST" %>
+       <%= f.text_area :text %></br>
+       <%= f.submit "POST", :class=>"btn" %>
        <% end %>
       </div>
-  
+
       <div class="comment-display">
-       <p>コメント一覧</p>
+       <p><コメント一覧></p>
        <% @comments.each do |comment| %>
-       <%= comment.text %></br>
-       <% end %>      
+        <p>
+         <strong><%= link_to comment.user.id, "/users/#{comment.user_id}" %></strong>:<%= comment.text %>
+        </p>
+       <% end %>
       </div>
   </div>
 </div>

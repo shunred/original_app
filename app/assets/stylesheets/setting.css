@@ -17,6 +17,7 @@ time, mark, audio, video {
     font-size:100%;
     vertical-align:baseline;
     background:transparent;
+    font-family: sans-serif;
 }
 
 body {
@@ -241,4 +242,44 @@ input, select {
 	-ms-filter: “alpha( opacity=80 )”;
 }
 
+
+.comment-write-area textarea {
+	margin: 10px 0px;
+	height: 50px;
+	width: 500px;
+	border: solid 1px #DCDCDC;
+	border-radius: 3px;
+	font-size: 100%;
+}
+
+.btn {
+	/*text-align: center;*/
+	font-size: 16px;
+	color: white;
+	background-color: #FDD835;
+	border-radius: 3px;
+	width: 90px;
+    height: 30px;
+    line-height: 30px;
+    margin-left: 10px;
+    /*display: inline-block;*/
+    /*margin: 0 auto;*/
+}
+
+.comment-display {
+	margin: 10px 0px;
+}
+
+.comment-display p {
+	margin-top: 10px;
+}
+
+.text-post textarea {
+	margin: 10px 0px;
+	height: 200px;
+	width: 500px;
+	border: solid 1px #DCDCDC;
+	border-radius: 3px;
+	font-size: 100%;
+}
 
