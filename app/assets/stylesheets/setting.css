@@ -253,7 +253,7 @@ input, select {
 }
 
 .btn {
-	text-align: center;
+	/*text-align: center;*/
 	font-size: 16px;
 	color: white;
 	background-color: #FDD835;
@@ -261,7 +261,9 @@ input, select {
 	width: 90px;
     height: 30px;
     line-height: 30px;
-   
+    margin-left: 10px;
+    /*display: inline-block;*/
+    /*margin: 0 auto;*/
 }
 
 .comment-display {
@@ -272,5 +274,12 @@ input, select {
 	margin-top: 10px;
 }
 
-
+.text-post textarea {
+	margin: 10px 0px;
+	height: 200px;
+	width: 500px;
+	border: solid 1px #DCDCDC;
+	border-radius: 3px;
+	font-size: 100%;
+}
 

@@ -1,6 +1,10 @@
-<%= form_for(@tweet) do |f| %>
-  <%= f.text_area :text, style: 'width: 600px; height: 300px;' %></br>
+<div class="contents">
+	<div class="text-post">
+		<%= form_for(@tweet) do |f| %>
+		  <%= f.text_area :text %></br>
 
-  <%= f.submit "POST" %>
+		  <%= f.submit "POST", :class=>"btn" %>
 
-<% end %>
+		<% end %>
+	</div>
+</div>

@@ -18,7 +18,7 @@
       <ul class="menu">
       	<% if user_signed_in? %>
 	      	<li class="menu__list"><%= link_to "SingOut", destroy_user_session_path, method: :delete %></li>
-	        <li class="menu__list"><%= link_to "New", "tweets/new", method: :get %></li>
+	        <li class="menu__list"><%= link_to "New", "/tweets/new", method: :get %></li>
         <% else %>
          	<li class="menu__list"><%= link_to "SingIn", new_user_session_path, method: :get %></li>
         <% end %>
