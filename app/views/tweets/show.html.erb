@@ -21,10 +21,12 @@
 
       <div class="comment-display">
        <p><コメント一覧></p>
+       <% if @comments %>
        <% @comments.each do |comment| %>
         <p>
-         <strong><%= link_to comment.user.id, "/users/#{comment.user_id}" %></strong>:<%= comment.text %>
+         <strong><%= comment.user.name %></strong>  :  <%= comment.text %>
         </p>
+       <% end %>
        <% end %>
       </div>
   </div>
