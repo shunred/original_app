@@ -253,7 +253,7 @@ input, select {
 }
 
 .btn {
-	/*text-align: center;*/
+
 	font-size: 16px;
 	color: white;
 	background-color: #FDD835;
@@ -262,8 +262,6 @@ input, select {
     height: 30px;
     line-height: 30px;
     margin-left: 10px;
-    /*display: inline-block;*/
-    /*margin: 0 auto;*/
 }
 
 .comment-display {
