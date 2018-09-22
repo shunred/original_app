@@ -7,7 +7,7 @@ b, i,
 dl, dt, dd, ol, ul, li,
 fieldset, form, label, legend,
 table, caption, tbody, tfoot, thead, tr, th, td,
-article, aside, canvas, details, figcaption, figure, 
+article, aside, canvas, details, figcaption, figure,
 footer, header, hgroup, menu, nav, section, summary,
 time, mark, audio, video {
     margin:0;
@@ -28,7 +28,7 @@ body {
 }
 
 article,aside,details,figcaption,figure,
-footer,header,hgroup,menu,nav,section { 
+footer,header,hgroup,menu,nav,section {
     display:block;
 }
 
@@ -64,7 +64,7 @@ ins {
 /* change colours to suit your needs */
 mark {
     background-color:#ff9;
-    color:#000; 
+    color:#000;
     font-style:italic;
     font-weight:bold;
 }
@@ -87,7 +87,7 @@ table {
 hr {
     display:block;
     height:1px;
-    border:0;   
+    border:0;
     border-top:1px solid #cccccc;
     margin:1em 0;
     padding:0;
@@ -114,7 +114,7 @@ input, select {
 	background-color: #F44336;
 	line-height: 70px;
     box-shadow: 0 3px 5px gray;
-    
+
 }
 
 .brand-logo {
@@ -171,7 +171,7 @@ input, select {
 	padding: 10px;
 	margin-bottom: 40px;
 	word-wrap:break-word;
-	
+
 }
 
 .action  {
@@ -386,6 +386,32 @@ input, select {
 
 .form-footer a:hover {
   border-bottom: 1px dotted #8c8c8c;
+}
+
+
+#page-top {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+}
+
+#page-top a {
+    display: block;
+    background: #F44336;
+    color: #fff;
+    width: 60px;
+    height: 60px;
+    line-height: 60px;
+    text-align: center;
+    text-decoration: none;
+    border-radius: 100%;
+}
+
+#page-top a:hover {
+    opacity:0.8;
+    filter:alpha(opacity=80);
+    -ms-filter: “alpha( opacity=80 )”;
+    text-decoration: none;
 }
 
 
